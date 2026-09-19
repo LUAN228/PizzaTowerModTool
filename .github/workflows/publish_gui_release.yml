@@ -9,7 +9,6 @@ concurrency:
 
 jobs:
   build_gui:
-
     strategy:
       fail-fast: false
       matrix:
@@ -21,10 +20,6 @@ jobs:
           - os: windows-latest
             target: win-x64
             output_name: Windows-SingleFile
-            singlefile: false
-          - os: ubuntu-latest
-            target: linux-x64
-            output_name: Linux
             singlefile: false
 
     runs-on: ${{ matrix.os }}
@@ -51,15 +46,17 @@ jobs:
         dotnet publish UndertaleModTool -c Release -r ${{ matrix.target }} --self-contained true -p:PublishSingleFile=${{ matrix.singlefile }} --output ./${{ matrix.output_name }}
 
     - name: Copy external files
+      shell: pwsh
       run: |
-        cp ./README.md ./${{ matrix.output_name }}/ || true
-        cp ./SCRIPTS.md ./${{ matrix.output_name }}/ || true
-        cp ./LICENSE.txt ./${{ matrix.output_name }}/ || true
-        rm -f ./${{ matrix.output_name }}/Underanalyzer.pdb
+        if (Test-Path ./README.md) { Copy-Item ./README.md ./${{ matrix.output_name }}/ -Force }
+        if (Test-Path ./SCRIPTS.md) { Copy-Item ./SCRIPTS.md ./${{ matrix.output_name }}/ -Force }
+        if (Test-Path ./LICENSE.txt) { Copy-Item ./LICENSE.txt ./${{ matrix.output_name }}/ -Force }
+        if (Test-Path ./${{ matrix.output_name }}/Underanalyzer.pdb) { Remove-Item ./${{ matrix.output_name }}/Underanalyzer.pdb -Force }
 
     - name: Create ZIP Artifact
+      shell: pwsh
       run: |
-        7z a -tzip PizzaTowerModTool-GUI-${{ matrix.output_name }}.zip ./${{ matrix.output_name }}/* -mx9
+        Compress-Archive -Path ./${{ matrix.output_name }}/* -DestinationPath PizzaTowerModTool-GUI-${{ matrix.output_name }}.zip -Force
 
     - name: Upload Artifact
       uses: actions/upload-artifact@v7
