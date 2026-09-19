@@ -1,75 +1,52 @@
 # PizzaTowerModTool
-
-[![GitHub](https://img.shields.io/github/license/UnderminersTeam/UndertaleModTool?logo=github)](LICENSE.txt)
-
+[![GitHub](https://img.shields.io/github/license/SEU_USUARIO/PizzaTowerModTool?logo=github)](https://github.com/SEU_USUARIO/PizzaTowerModTool/blob/master/LICENSE.txt)
 The most complete tool for modding, decompiling and unpacking Pizza Tower (and other GameMaker games!)
-
-> *\* (Seeing a specialized modding tool built for maximum speed and pizza-fueled action...)*
-> 
-> *\* (IT'S PIZZA TIME!)*
-
+> *\* (It's time to show what you're made of!)*
 # Quick Start
-
-## Windows
-
-1. Find the latest stable (or nightly) release from the [Downloads](#downloads) section below
-2. Download the GUI version (e.g. `PizzaTowerModTool_v0.9.2.0-Windows.zip`), or the CLI version if you know what you're doing
-3. Extract the ZIP file to a folder (do not run from inside the archive!)
-4. Run `PizzaTowerModTool.exe` to start the tool
-5. Open your game's data file (e.g. `data.win`, `game.ios`, `game.unx`, etc.) via File → Open
-
-## macOS/Linux
-
-As of writing, there is no official method of running PizzaTowerModTool's GUI on macOS or Linux natively. However, there are some options available:
-- Use the CLI (command-line interface) version of the tool for automation and quick tasks.
-- Run the tool via [Wine](https://winehq.org) or Proton on Linux/Steam Deck.
-
+## Windows & Linux
+1. Find the latest release from the [Downloads](#downloads) section below.
+2. Download the GUI version (e.g., `PizzaTowerModTool_v0.9.2.0-Windows.zip` or `PizzaTowerModTool_v0.9.2.0-Linux.zip`).
+3. Extract the ZIP file to a folder (do not run from inside the archive!).
+4. Run `PizzaTowerModTool.exe` (on Windows) or the executable binary (on Linux) to start the tool.
+5. Open your game's data file (e.g. `data.win`, `game.unx`, etc.) via File → Open.
+## macOS
+*Note: macOS is currently not supported.*
 # Downloads
+Both stable and development releases can be downloaded from the table below!
 
-Both the latest stable and nightly releases can be compiled and downloaded directly via **GitHub Actions** in this repository!
+| Release | Link / Status |
+| :--- | :--- |
+| Latest | [![Latest Release](https://img.shields.io/github/v/release/SEU_USUARIO/PizzaTowerModTool)](https://github.com/SEU_USUARIO/PizzaTowerModTool/releases) |
 
-PizzaTowerModTool has a few different versions to choose from:
-
-* `GUI` (default) - the tool has a full graphical interface, making data file viewing and manipulation convenient.
-* `CLI` - the tool is accessible only via a command-line interface, which is useful for automation and quick tasks.
-* `Single file` - the tool is only one executable, with all dependencies embedded within it.
-* `Non-single file` (default) - all dependencies are located right next to the executable.
-
+PizzaTowerModTool comes in the following options:
+* `GUI` - The full graphical interface, making data file viewing and manipulation convenient.
+* `Non-single file` (default) - All dependencies are located next to the executable for maximum stability.
+* `Single file` - The tool is bundled into one executable with all dependencies embedded.
 # Main Features
-
-* Optimized specifically for **Pizza Tower** bytecode, objects, sprites, and room setups, while maintaining compatibility with other GameMaker games.
-* Can read every single byte from the data file and recreate a byte-for-byte exact copy from the decoded data.
-* Properly handles all pointers in the file so adding/removing sprites, objects, or code won't corrupt your game.
-* Includes an editor to adjust values, tilemaps, collisions, and levels.
-* High-level GML decompiler and compiler for editing object logic, player states, and game mechanics.
-* C# script runner for bulk importing/exporting sprites, animations, and GML code.
-
+* Can read every single byte from the data file of Pizza Tower and most other GameMaker games, then recreate an exact copy from the decoded data.
+* Properly handles all pointers in the file so that adding, removing, or tweaking elements won't break the file format.
+* Includes a full graphical editor to inspect and edit code, objects, sprites, textures, and sounds.
+* Built-in room/level editor.
+* High-level GML decompiler and compiler to edit game logic natively.
+* Full support for running C# (`.csx`) scripts to automate repetitive modding tasks and sprite batching.
+* Automatic file associations for GameMaker data files.
 # Included Scripts
-
 PizzaTowerModTool comes with a collection of C# scripts that extend its functionality for game modding.
-For more information on them, consult the [SCRIPTS.md](SCRIPTS.md) file.
-
+For more information, consult the [SCRIPTS.md](https://github.com/SEU_USUARIO/PizzaTowerModTool/blob/master/SCRIPTS.md) file.
 # Contributing
-
-If you find a bug or a data file that does not load, please report it on the repository's Issues page.
-
+If you find a bug or a data file that does not load, please report it on the [issues page](https://github.com/SEU_USUARIO/PizzaTowerModTool/issues).
 # Compilation Instructions
-
-In order to compile the repo yourself, the `.NET Core` SDK is required.
-
+In order to compile the repo yourself, the `.NET Core SDK` is required.
+When cloning using Git, make sure to recursively clone submodules (e.g. with `--recurse-submodules`).
 The following projects can be compiled:  
-- `UndertaleModLib`: The core library used for GameMaker data files.
-- `PizzaTowerModCli` / `UndertaleModCli`: Command line interface.
-- `PizzaTowerModTool`: The main graphical user interface.
-
+- `UndertaleModLib`: The core library used by the project.
+- `PizzaTowerModTool`: The main graphical user interface for interacting with GameMaker data files.
 #### Compiling Via IDE
-- Open `PizzaTowerModTool.sln` (or `UndertaleModTool.sln`) in Visual Studio, Rider, or VS Code.
-- Select `PizzaTowerModTool` and build.
-
-#### Compiling Via GitHub Actions (Recommended)
-- Simply commit your changes to GitHub and let the automated **GitHub Actions** workflow build the executables under the **Actions -> Artifacts** tab!
-
-# Credits & Acknowledgments
-
-* Based on the original [UndertaleModTool](https://github.com/UnderminersTeam/UndertaleModTool) by the Underminers Team.
-* Special thanks to Tour De Pizza for creating **Pizza Tower**!
+- Open `PizzaTowerModTool.sln` in your IDE of choice (Visual Studio, JetBrains Rider, Visual Studio Code, etc.).
+- Select the `PizzaTowerModTool` project.
+- Build / Compile.
+#### Compiling Via Command Line
+- Open a terminal and navigate to the directory of `PizzaTowerModTool.sln`.
+- Execute `dotnet publish PizzaTowerModTool`.
+# Special thanks
+Special thanks to the **Underminers Team** for creating the original UndertaleModTool framework upon which this tool is built, and to **Tour De Pizza** for creating Pizza Tower!
