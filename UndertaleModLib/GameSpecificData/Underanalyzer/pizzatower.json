@@ -1,0 +1,15 @@
+{
+  "Types": {
+    "General": {}
+  },
+  "GlobalNames": {
+    "Variables": {
+      "global.collect": "Int32",
+      "global.saveroom": "Asset.DsList",
+      "global.flags": "Asset.DsMap"
+    },
+    "FunctionArguments": {},
+    "FunctionReturn": {}
+  },
+  "CodeEntryNames": {}
+}
