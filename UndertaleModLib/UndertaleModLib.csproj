@@ -35,14 +35,12 @@
     <PackageReference Include="SharpZipLib" Version="1.4.2" />
   </ItemGroup>
   <ItemGroup>
-    <None Remove="GameSpecificData\Definitions\deltarune.json" />
+    <None Remove="GameSpecificData\Definitions\pizzatower.json" />
     <None Remove="GameSpecificData\Definitions\gamemaker.json" />
-    <None Remove="GameSpecificData\Definitions\undertale.json" />
-    <None Remove="GameSpecificData\deltarune.json" />
+    <None Remove="GameSpecificData\pizzatower.json" />
     <None Remove="GameSpecificData\empty.json" />
     <None Remove="GameSpecificData\gamemaker.json" />
     <None Remove="GameSpecificData\README.txt" />
-    <None Remove="GameSpecificData\undertale.json" />
     <None Remove="version.txt" />
   </ItemGroup>
   <ItemGroup>
@@ -51,7 +49,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
     </Content>
-    <Content Include="GameSpecificData\Underanalyzer\deltarune.json">
+    <Content Include="GameSpecificData\Underanalyzer\pizzatower.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
     </Content>
@@ -63,19 +61,11 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
     </Content>
-    <Content Include="GameSpecificData\Underanalyzer\undertale.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-	  <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-    </Content>
-    <Content Include="GameSpecificData\Definitions\deltarune.json">
+    <Content Include="GameSpecificData\Definitions\pizzatower.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
     </Content>
     <Content Include="GameSpecificData\Definitions\gamemaker.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-	  <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-    </Content>
-    <Content Include="GameSpecificData\Definitions\undertale.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
     </Content>
