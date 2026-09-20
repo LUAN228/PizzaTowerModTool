@@ -3,14 +3,14 @@
 The most complete tool for modding, decompiling and unpacking Pizza Tower (and other GameMaker games!)
 > *\* (It's time to show what you're made of!)*
 # Quick Start
-## Windows & Linux
+## Windows
 1. Find the latest release from the [Downloads](#downloads) section below.
-2. Download the GUI version (e.g., `PizzaTowerModTool_v0.9.2.0-Windows.zip` or `PizzaTowerModTool_v0.9.2.0-Linux.zip`).
+2. Download the GUI version (e.g., `PizzaTowerModTool_v0.9.2.0-Windows.zip`).
 3. Extract the ZIP file to a folder (do not run from inside the archive!).
-4. Run `PizzaTowerModTool.exe` (on Windows) or the executable binary (on Linux) to start the tool.
+4. Run `PizzaTowerModTool.exe` to start the tool.
 5. Open your game's data file (e.g. `data.win`, `game.unx`, etc.) via File → Open.
-## macOS
-*Note: macOS is currently not supported.*
+## macOS & Linux
+*Note: macOS and Linux are currently not supported.*
 # Downloads
 Both stable and development releases can be downloaded from the table below!
 
