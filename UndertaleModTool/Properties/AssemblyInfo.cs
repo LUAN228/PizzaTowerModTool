@@ -7,49 +7,33 @@ using System.Windows;
 // Ogólne informacje o zestawie są kontrolowane poprzez następujący
 // zestaw atrybutów. Zmień wartości tych atrybutów, aby zmodyfikować informacje
 // powiązane z zestawem.
-[assembly: AssemblyTitle("UndertaleModTool")]
+[assembly: AssemblyTitle("PizzaTowerModTool")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("UndertaleModTool")]
+[assembly: AssemblyProduct("PizzaTowerModTool")]
 [assembly: AssemblyCopyright("Copyright ©  2018-2026")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
 // Ustawienie elementu ComVisible na wartość false sprawia, że typy w tym zestawie są niewidoczne
-// dla składników COM. Jeśli potrzebny jest dostęp do typu w tym zestawie z
-// COM, ustaw wartość true dla atrybutu ComVisible tego typu.
+// dla składników COM. Jeśli potrzebny jest dostęp do typu z tego zestawu z
+// COM, ustaw wartość true dla tego typu.
 [assembly: ComVisible(false)]
 
 //Aby rozpocząć kompilację aplikacji możliwych do zlokalizowania, ustaw
 //<UICulture>Kultura_używana_podczas_kodowania</UICulture> w pliku csproj
 //w grupie <PropertyGroup>. Jeśli na przykład jest używany język angielski (USA)
-//w plikach źródłowych ustaw dla elementu <UICulture> wartość en-US. Następnie usuń komentarz dla
+//w plikach źródłowych ustaw dla elementu UICulture wartość en-US. Następnie usuń komentarz dla
 //poniższego atrybutu NeutralResourceLanguage. Zaktualizuj wartość „en-US” w
 //poniższej linii tak, aby dopasować ustawienie UICulture w pliku projektu.
 
-//[assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.Satellite)]
-
+// [assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.Satellite)]
 
 [assembly: ThemeInfo(
-    ResourceDictionaryLocation.None, //gdzie znajdują się słowniki zasobów specyficznych dla motywów
-                                     //(używane, jeśli nie można odnaleźć zasobu na stronie,
-                                     // lub słowniki zasobów aplikacji)
-    ResourceDictionaryLocation.SourceAssembly //gdzie znajduje się słownik zasobów ogólnych
-                                              //(używane, jeśli nie można odnaleźć zasobu na stronie,
-                                              // aplikacji lub słowników zasobów specyficznych dla motywów)
+    ResourceDictionaryLocation.None,
+    ResourceDictionaryLocation.SourceAssembly
 )]
 
-
-// Informacje o wersji zestawu zawierają następujące cztery wartości:
-//
-//      Wersja główna
-//      Wersja pomocnicza
-//      Numer kompilacji
-//      Rewizja
-//
-// Możesz określić wszystkie wartości lub użyć domyślnych numerów kompilacji i poprawki
-// przy użyciu symbolu „*”, tak jak pokazano poniżej:
-// [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("0.9.2.0")]
 [assembly: AssemblyFileVersion("0.9.2.0")]
