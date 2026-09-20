@@ -1,4 +1,4 @@
-<Window x:Class="UndertaleModTool.MainWindow"
+xmlns:local="clr-namespace:UndertaleModTool"
         Closing="DataWindow_Closing"
         IsVisibleChanged="Window_IsVisibleChanged"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
